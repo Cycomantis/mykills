@@ -1,0 +1,61 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Script File="MyKills.lua"/>
+	<Frame name="MKFrame" enableMouse="true" movable="true">
+		<Size>
+		<AbsDimension x="103" y="142"/>
+		</Size>
+		<Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+        <Backdrop name="$parentBackdrop" bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+            <EdgeSize>
+                <AbsValue val="16"/>
+            </EdgeSize>
+            <TileSize>
+                <AbsValue val="32"/>
+            </TileSize>
+            <BackgroundInsets>
+                <AbsInset left="5" right="5" top="5" bottom="5"/>
+            </BackgroundInsets>
+        </Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="MKText" font="Fonts\FRIZQT__.TTF" justifyH="LEFT">
+					<FontHeight>
+						<AbsValue val="7"/>
+					</FontHeight>
+					<Size>
+						<AbsDimension x="154" y="114"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="6" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>""
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				MK_OnLoad();
+			</OnLoad>
+			<OnUpdate>
+				MK_OnUpdate();
+			</OnUpdate>
+			<OnDragStart>
+				MK_DragStart();
+			</OnDragStart>
+			<OnDragStop>
+				MK_DragStop();
+			</OnDragStop>
+			<OnMouseUp>
+				MK_DragStop();
+			</OnMouseUp>
+			<OnEvent>
+				MK_OnEvent(self, event, ...)
+			</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

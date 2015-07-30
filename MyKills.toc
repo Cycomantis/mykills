@@ -1,0 +1,10 @@
+## Interface: 60000
+## Title: MyKills
+## Notes: A simple light weight Battleground Statistics Tracker.
+## Version: v1.0.0b 
+## Author: Cycomantis
+## X-Category: Interface Enhancements
+## SavedVariablesPerCharacter: MKLifetimeKills, MKLifetimeDeaths, MKKillStreak, MKShowMe
+
+MyKills.xml
+MyKills.lua
